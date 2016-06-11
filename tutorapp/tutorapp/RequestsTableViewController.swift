@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RequestsTableViewController: UITableViewController {
 
@@ -17,7 +18,29 @@ class RequestsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let ref = Firebase(url:"https://project-6564761374345501298.firebaseio.com/")
+        
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+    
+        super.viewDidAppear(animated)
+        
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            
+        var newItems = [GroceryItem]()
+            
+        for item in snapshot.children {
+            
+        let groceryItem = GroceryItem(snapshot: item as! FDataSnapshot)
+            newItems.append(groceryItem)
+            }
+        self.items = newItems
+        self.tableView.reloadData()
+        })
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
