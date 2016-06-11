@@ -26,25 +26,20 @@ class RequestsTableViewController: UITableViewController {
                 print(error.description)
         })
     
-        super.viewDidAppear(animated)
-        
-        ref.observeEventType(.Value, withBlock: { snapshot in
+        //ref.observeEventType(.Value, withBlock: { snapshot in
             
-        var newItems = [GroceryItem]()
+       // var newItems = [GroceryItem]()
             
-        for item in snapshot.children {
+        //for item in snapshot.children {
             
-        let groceryItem = GroceryItem(snapshot: item as! FDataSnapshot)
-            newItems.append(groceryItem)
-            }
-        self.items = newItems
-        self.tableView.reloadData()
-        })
-        }
-        // Uncomment the following line to preserve selection between presentations
+        //    let groceryItem = GroceryItem(snapshot: item as! FDataSnapshot)
+        //    newItems.append(groceryItem)
+       // }
+       // self.items = newItems
+       // self.tableView.reloadData()
+            
+        //})
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 

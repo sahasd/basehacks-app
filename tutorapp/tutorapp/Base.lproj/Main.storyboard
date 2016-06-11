@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="-317"/>
+            <point key="canvasLocation" x="1102" y="-355"/>
         </scene>
         <!--Requests Table View Controller-->
         <scene sceneID="ssV-98-mwG">
@@ -143,6 +143,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="HeE-UK-wMk">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="h7d-4f-MWO"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="olD-Ho-4Mu">
                             <connections>
                                 <action selector="itemButtonDidTouch:" destination="ktE-5a-geF" id="SJN-Zb-aGy"/>
@@ -170,7 +171,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0Wy-HT-ayY"/>
+                    <navigationItem key="navigationItem" id="0Wy-HT-ayY">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="4Cz-Yd-hgG"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="5M3-Dg-ewL"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rs-ti-apd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
