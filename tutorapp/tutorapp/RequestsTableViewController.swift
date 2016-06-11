@@ -10,8 +10,12 @@ import UIKit
 
 class RequestsTableViewController: UITableViewController {
 
+    
+    @IBAction func itemButtonDidTouch(sender: AnyObject) {
+    performSegueWithIdentifier("chatViewSegue", sender: sender)
+    }
+    
     override func viewDidLoad() {
-        self.title = "Juggies"
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
